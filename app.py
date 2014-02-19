@@ -1,4 +1,5 @@
 from flask import Flask, render_template, send_from_directory
+import os
 
 app = Flask(__name__);
 
@@ -9,7 +10,7 @@ def get_link(link):
 
 @app.route('/img/<path:link>')
 def show_image(link):
-	return send_from_directory('shots', link)
+	return send_from_directory(os.path.dirname(__file__) + '/shots', link)
 
 from gevent.wsgi import WSGIServer
 http_server = WSGIServer(('127.0.0.1', 8500), app)
