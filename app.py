@@ -3,7 +3,7 @@ import re
 
 app = Flask(__name__);
 
-@app.route('/<link>')
+@app.route('/<path:link>')
 def get_link(link):
 	return render_template('index.html', link=link)
 
