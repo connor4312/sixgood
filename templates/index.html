@@ -1,1 +1,13 @@
-You asked for {{ link }}.
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Screenshot {{ link }}</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<img src="{{ url_for('show_image', link=link) }}">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="{{ url_for('static', filename='viewer.js') }}"></script>
+</body>
+</html>

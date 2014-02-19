@@ -1,0 +1,28 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: url('bg.jpg');
+	padding: 30px;
+}
+
+img {
+	display: block;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.zoomed-in {
+	cursor: -webkit-zoom-out;
+	cursor: -moz-zoom-out;
+	cursor: zoom-out;
+}
+
+.zoomed-out {
+	cursor: -webkit-zoom-in;
+	cursor: -moz-zoom-in;
+	cursor: zoom-in;
+}
